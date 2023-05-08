@@ -1,0 +1,64 @@
+/**
+ * Helper functions for manipulator callbacks
+ */
+
+import type { Maybe } from './util.js'
+import { nodeMetadataStore, checkNode } from './metadata.js'
+import type { AstNode } from '../gyros.js'
+
+/**
+ * Get the original source code of a node
+ *
+ * @param node The AST node to get the source code for
+ *
+ */
+export function source(node: AstNode) {
+  const { context } = nodeMetadataStore.get(node)!
+
+  return context.magicString
+    .slice(node.loc!.start.offset, node.loc!.end.offset)
+    .toString()
+}
+
+/**
+ * Get a node's parent node
+ *
+ * @param node   The AST node whose parent to get
+ * @param levels The number of levels to go up the AST
+ *
+ */
+export function parent(node: AstNode, levels = 1): Maybe<AstNode> {
+  const { parent: parentNode } = nodeMetadataStore.get(node)!
+
+  // No matter how many levels to climb, no parent means undefined
+  if (!parentNode) {
+    return undefined
+  }
+
+  // No levels to go up, return current parent
+  if (levels <= 1) {
+    return parentNode
+  }
+
+  // Recursively get parent node when levels are remaining
+  return parent(parentNode, levels - 1)
+}
+
+/**
+ * Replace a node's source code
+ *
+ * @param node        The AST node to replace
+ * @param replacement The replacement code
+ *
+ */
+export function update(node: AstNode, replacement: string) {
+  checkNode(node)
+
+  const { context } = nodeMetadataStore.get(node)!
+
+  context.magicString.overwrite(
+    node.loc!.start.offset,
+    node.loc!.end.offset,
+    replacement
+  )
+}
