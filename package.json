@@ -26,6 +26,7 @@
   "files": [
     "dist"
   ],
+  "main": "./dist/gyros.js",
   "module": "./dist/gyros.js",
   "exports": {
     "import": "./dist/gyros.js"
