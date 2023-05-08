@@ -159,8 +159,8 @@ gyros('$x = [1]', (node, { parent }) => {
     // `node` refers to the `1` number literal
     parent()  // same as parent(1), refers to the `1` as an array element
     parent(2) // refers to the `[1]` expression
-    parent(3) // refers to the `x = [1]` assignment expression
-    parent(4) // refers to the `x = [1]` statement
+    parent(3) // refers to the `$x = [1]` assignment expression
+    parent(4) // refers to the `$x = [1]` statement
     parent(5) // refers to the program as a whole (root node)
     parent(6) // yields `undefined`, same as parent(6), parent(7) etc.
   }
