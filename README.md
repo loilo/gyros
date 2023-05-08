@@ -1,6 +1,6 @@
 <div align="center">
   <br>
-  <img src="gyros.svg" alt="A quarter-circle shaped bread with Gyros stuffing" width="150" height="106">
+  <img src="https://raw.githubusercontent.com/loilo/gyros/master/gyros.svg" alt="A quarter-circle shaped bread with Gyros stuffing" width="150" height="106">
   <br>
   <h1>Gyros</h1>
 </div>
