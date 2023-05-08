@@ -27,7 +27,6 @@
     "dist"
   ],
   "module": "./dist/gyros.js",
-  "types": "./index.d.ts",
   "exports": {
     "import": "./dist/gyros.js"
   },
