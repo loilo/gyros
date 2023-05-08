@@ -1,13 +1,13 @@
 <div align="center">
   <br>
-  <img src="https://raw.githubusercontent.com/loilo/gyros/master/gyros.svg" alt="A quarter-circle shaped bread with Gyros stuffing" width="150" height="106">
+  <img src="https://raw.githubusercontent.com/loilo/gyros/main/gyros.svg" alt="A quarter-circle shaped bread with Gyros stuffing" width="150" height="106">
   <br>
   <h1>Gyros</h1>
 </div>
 
 Transform PHP [AST](http://en.wikipedia.org/wiki/Abstract_syntax_tree)s the easy way. Just as tasty as [Yufka](https://github.com/loilo/yufka), but with different ingredients.
 
-[![Tests](https://badgen.net/github/checks/loilo/gyros/master)](https://github.com/loilo/gyros/actions)
+[![Tests](https://badgen.net/github/checks/loilo/gyros/main)](https://github.com/loilo/gyros/actions)
 [![npm](https://badgen.net/npm/v/gyros)](https://npmjs.com/package/gyros)
 
 ## Installation
