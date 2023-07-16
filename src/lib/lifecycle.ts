@@ -1,6 +1,6 @@
 /**
  * A set of functions that represent different tasks
- * in the lifecycle of a yufka() call
+ * in the lifecycle of a gyros() call
  */
 
 import type { AstNode, Context, SyncResult } from '../gyros.js'
@@ -84,7 +84,7 @@ export function performSuccessiveRecursiveWalks<T>(
  * Collect metadata of a tree
  *
  * @param node    The starting node of the tree
- * @param context The yufka() context
+ * @param context The gyros() context
  */
 export function collectTreeMetadata<T>(node: AstNode, context: Context<T>) {
   const childNodes = collectChildNodes(node)
@@ -126,7 +126,7 @@ function createNodeHelper<U extends HelperName>(node: AstNode, helperName: U) {
  * Walk the AST under the given node and update its descendants
  *
  * @param node    The AST node to start at
- * @param context The yufka() context
+ * @param context The gyros() context
  */
 export function handleNode<T>(node: AstNode, context: Context<T>) {
   // Get subwalks to perform
@@ -170,9 +170,9 @@ export function handleNode<T>(node: AstNode, context: Context<T>) {
 }
 
 /**
- * Create an immutable yufka() result
+ * Create an immutable gyros() result
  *
- * @param context The yufka() context
+ * @param context The gyros() context
  */
 export function createResult<T>({
   magicString,

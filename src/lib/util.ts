@@ -1,5 +1,5 @@
 /**
- * Utilities that are completely independent of how Yufka works
+ * Utilities that are completely independent of how Gyros works
  */
 
 import type { AstNode } from '../gyros.js'

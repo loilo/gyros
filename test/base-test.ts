@@ -1,7 +1,7 @@
 import { expect } from 'vitest'
 
 /**
- * This is the touchstone test for Yufka.
+ * This is the touchstone test for Gyros.
  *
  * It offers some `src` code to be transformed by the test so that the
  * resulting code satisfies the `validate()` function.
