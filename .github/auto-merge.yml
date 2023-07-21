@@ -1,0 +1,33 @@
+# Minor & patch updates
+- match:
+    dependency_name: '@typescript-eslint/eslint-plugin'
+    update_type: semver:minor
+
+- match:
+    dependency_name: '@typescript-eslint/parser'
+    update_type: semver:minor
+
+- match:
+    dependency_name: eslint
+    update_type: semver:minor
+
+- match:
+    dependency_name: eslint-config-prettier
+    update_type: semver:minor
+
+- match:
+    dependency_name: vite
+    update_type: semver:minor
+
+- match:
+    dependency_name: vitest
+    update_type: semver:minor
+
+# Only patch updates
+- match:
+    dependency_name: typescript
+    update_type: semver:patch
+
+- match:
+    dependency_name: '@types/node'
+    update_type: semver:patch
